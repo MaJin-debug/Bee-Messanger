@@ -41,7 +41,7 @@ jobs:
       - name: Unpack the web app into www/
         run: |
           mkdir -p mobile/www
-          unzip -o bee-messenger.zip -d mobile/www
+          unzip -o bee-messenger-1.zip -d mobile/www
           [ -f icon.png ] && cp icon.png mobile/www/icon.png || echo "No icon.png, using fallback logo"
           # The zip in the repo must be the latest version (it must contain the Android sign-in code)
           grep -q "Capacitor" mobile/www/app.js || { echo "::error::bee-messenger.zip in your repo is an OLD version. Upload the newest bee-messenger.zip to the repo root."; exit 1; }
