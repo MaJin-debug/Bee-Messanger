@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['bee-messenger.zip', 'icon.png', '.github/workflows/build-apk.yml']
+    paths: ['bee-messenger-1.zip', 'icon.png', '.github/workflows/build-apk.yml']
 
 permissions:
   contents: write
@@ -24,7 +24,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - uses: actions/setup-java@v4
         with:
